@@ -1,0 +1,65 @@
+.__select-me-container,
+.__select-me-label,
+.__select-me-options,
+.__select-me-option {
+  box-sizing: border-box;
+}
+
+.__select-me-container {
+  display: inline-block;
+  position: relative;
+}
+
+.__select-me-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  border: 1px solid #000000;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.__select-me-container:focus > .__select-me-label {
+  border-width: 2px;
+  outline: none;
+}
+
+.__select-me-label::after {
+  content: '';
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top-color: #000000;
+  margin-left: 12px;
+  margin-top: 4px;
+}
+
+.__select-me-options {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #000000;
+  width: 100%;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.__select-me-options.show {
+  display: block;
+}
+
+.__select-me-option {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.__select-me-option:hover {
+  background-color: hsl(200, 100%, 70%);
+}
+
+.__select-me-option.selected {
+  background-color: hsl(200, 100%, 50%);
+}
